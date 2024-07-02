@@ -15,3 +15,11 @@ a{
   width: 80%;
   margin: auto;
 }
+@keyframes loader {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
