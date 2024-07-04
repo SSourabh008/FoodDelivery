@@ -8,8 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StoreContextProvider>
     <App />
-    </StoreContextProvider>
-        
-    
+    </StoreContextProvider>W
   </BrowserRouter>,
 )
