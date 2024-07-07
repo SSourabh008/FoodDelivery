@@ -41,3 +41,13 @@
     border: none;
     background-color: grey;
  }
+ @media (max-width:750px) {
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
+ }
