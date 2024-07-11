@@ -9,10 +9,16 @@ import { connectDb } from "./config/db.js";
 //  app.use(bodyParser())
 app.use(express.json());
 
-
+//importing the routes
+import foodRoute from "./routes/foodRoutes.js";
+const port=5000
+app.use("/api/food",foodRoute);
+app.get("/",(req,res)=>{
+    res.send("Api working")
+})
  connectDb().then(()=>{
-    app.listen(4000,()=>{
-        console.log("App is running at http://loaclhost:4000");
+    app.listen(port,()=>{
+        console.log(`App is running at http://loaclhost:${port}`);
      })
  })
  //mongodb+srv://sourabh:sourabh#1234@cluster0.bdabp3i.mongodb.net/?
