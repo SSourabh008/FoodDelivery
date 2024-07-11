@@ -13,6 +13,7 @@ app.use(express.json());
 import foodRoute from "./routes/foodRoutes.js";
 const port=5000
 app.use("/api/food",foodRoute);
+app.use("/images",express.static("upload"))
 app.get("/",(req,res)=>{
     res.send("Api working")
 })
