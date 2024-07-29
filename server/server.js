@@ -19,7 +19,7 @@ app.get("/",(req,res)=>{
 })
  connectDb().then(()=>{
     app.listen(port,()=>{
-        console.log(`App is running at http://loaclhost:${port}`);
+        console.log(`App is running at http://localhost:${port}`);
      })
  })
  //mongodb+srv://sourabh:sourabh#1234@cluster0.bdabp3i.mongodb.net/?
