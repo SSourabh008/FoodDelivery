@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import bodyParser from "body-parser";
 import { connectDb } from "./config/db.js";
+import "dotenv/config"
  const app=express();
 
  app.use(cors());
@@ -11,9 +12,11 @@ app.use(express.json());
 
 //importing the routes
 import foodRoute from "./routes/foodRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 const port=5000
 app.use("/api/food",foodRoute);
 app.use("/images",express.static("upload"))
+app.use("/api/user",userRouter)
 app.get("/",(req,res)=>{
     res.send("Api working")
 })
