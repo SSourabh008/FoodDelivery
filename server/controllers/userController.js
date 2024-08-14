@@ -31,6 +31,7 @@ export const loginUser=async(req,res)=>{
 }
 
 export const registerUser=async (req,res)=>{
+    console.log("In the register api");
     try {
         const {name,email,password}=req.body;
         const exists=await userModel.findOne({email});
